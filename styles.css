@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+	--baseFont: 16px;
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--blue: hsl(248, 32%, 49%);
+	--darkBlue: hsl(249, 10%, 26%) ;
+	--grayishBlue: hsl(246, 25%, 77%);
+	--white: #ffffff;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	background: var(--red) url('./images/bg-intro-mobile.png') center/cover no-repeat;
+	padding: 22% 6%;
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+	.container {
+		background: var(--red) url('./images/bg-intro-desktop.png') center/cover no-repeat;
+		flex-direction: row;
+		/*https://web.dev/one-line-layouts/*/
+	}
+}
+
+.heading {
+	color: var(--white);
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.2em;
+}
+
+.subtitle {
+	color: var(--white);
+	text-align: center;
+	margin-top: 0px;
+	font-weight: 400;
+}
+
+.callout {
+	background-color: var(--blue);
+	margin: 2.5em 0px;
+	border-radius: 10px;
+	box-shadow: 0px 8px 3px 0px rgba(0,0,0,0.2);
+}
+
+.callout__text {
+	color: var(--white);
+	text-align: center;
+	font-weight: 300;
+	margin: 1.5em;
+	line-height: 1.75em;
+}
+
+.callout__text span {
+	font-weight: 700;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white);
+	padding: 8% 6%;
+	border-radius: 10px;
+}
+
+input {
+	font-size: 16px;
+	padding: 20px;
+	margin-bottom: 20px;
+	color: var(--grayishBlue);
+	font-weight: 700;
+	border: 1px solid var(--grayishBlue);
+	border-radius: 5px;
+}
+
+input[type="submit"] {
+	background-color: var(--green);
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 0px;
+	border: none;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
+}
+
+label {
+	display: none;
+}
+
+.disclaimer {
+	font-size: 13px;
+	text-align: center;
+	color: var(--grayishBlue);
+	padding: 16px;
+	margin: 0px;
+}
+
+.terms-link {
+	color: var(--red);
+	text-decoration: none;
+	font-weight: 700;
+}
+
